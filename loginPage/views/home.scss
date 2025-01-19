@@ -1,0 +1,89 @@
+$primary-color: #386134;
+$secondary-color: #1be009;
+$button-color: #386134;
+$text-color-secondary: #8b346a;
+$text-color-primary: #362630;
+$border: 0 solid black;
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+header {
+  background-color: $primary-color;
+  height: 100px;
+  p {
+    margin: auto;
+    width: fit-content;
+    color: $text-color-primary;
+    /*while some properties are repeated, they can be nested as follows to reduce code lines*/
+    font: {
+      weight: bold;
+      family: Helvetica, sans-serif;
+      size: 30px;
+    }
+    text: {
+      align: center;
+      transform: uppercase;
+      overflow: hidden;
+    }
+  }
+}
+
+.banner {
+  border: $border;
+  width: 100%;
+  height: 400px;
+  p {
+    margin: auto;
+    border: $border;
+    color: $text-color-secondary;
+    width: fit-content;
+    font-size: 5rem;
+  }
+}
+
+a {
+  margin: auto;
+  color: $secondary-color;
+  font : {
+    weight: bold;
+    family: Helvetica, sans-serif;
+    size: 1rem;
+  }
+}
+footer {
+  height: 100px;
+  width: 100%;
+  border: $border;
+  margin-top: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  .icons {
+    width: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    font: {
+      size: 20px;
+      weight: bold;
+    }
+  }
+  .logoutbtn {
+    width: 100px;
+    opacity: 0.2;
+    padding: 12px;
+    background-color: $button-color;
+    text: {
+      align: center;
+    }
+  }
+  .logoutbtn:hover {
+    opacity: 1;
+  }
+}
