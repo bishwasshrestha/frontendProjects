@@ -1,0 +1,20 @@
+.weatherdata {
+  color: white;
+  margin: 1%;
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  h3 {
+    font-size: 24px;
+    margin: 0;
+  }
+}

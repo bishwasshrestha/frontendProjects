@@ -1,0 +1,29 @@
+.Header {
+  height: 2em; 
+  padding: 1em;
+}
+
+.input-container {  
+  margin: auto;
+  width: 50%;
+  height: 2em;  
+  overflow: hidden;
+  border-radius: 1em;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+
+}
+
+input {
+  border: none;
+  font-size: 1rem;
+  height: 80%;
+  width: 85%;
+}
+
+input:focus {
+  outline: 0;
+}

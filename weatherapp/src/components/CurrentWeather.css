@@ -1,0 +1,44 @@
+.currentweather {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 20%;
+  margin: 1%;
+  border: 1px solid white;
+  
+
+  #temp_icon {
+    padding: 0;
+    overflow: hidden;
+
+    img {
+      margin: 0;
+    }
+
+    h3 {
+      font-size: 4rem;
+      color: rgb(83, 131, 252);
+      font-weight: bold;
+      text-shadow: 1px -1px rgb(252, 252, 252);
+      margin-top: -1.5em;
+      margin-right: 1em;
+    }
+  }
+}
+
+
+#description {
+  display: grid;
+  grid-template-columns: auto auto;      
+  width: 100%;
+}
+#box{  
+  border:1px solid black;
+  width: 100%;  
+  background-color: rgb(73, 105, 132);
+  p{
+    padding: 10px;
+    margin: 0;
+  }  
+}
