@@ -2,15 +2,15 @@
 require("dotenv").config();
 
 const express = require("express");
-const myDB = require("./connection");
+const myDB = require("./connection.js");
 const session = require("express-session");
 // const fccTesting = require("./freeCodeCamp/fcctesting.js");
 const routes = require("./routes.js");
 const passport = require("passport");
 const auth = require("./auth.js");
 const app = express();
-const http = require('http').createServer(app);
-const io = require('socket.io')(http);
+const http = require("http").createServer(app);
+const io = require("socket.io")(http);
 
 app.set("view engine", "pug");
 app.set("views", "./views/pug");
@@ -34,8 +34,8 @@ app.use(passport.session());
 
 myDB(async (client) => {
   const myDataBase = await client.db("database").collection("users");
-  io.on('connection', socket => {
-    console.log('A user has connected');
+  io.on("connection", (socket) => {
+    console.log("A user has connected");
   });
   routes(app, myDataBase);
   auth(app, myDataBase);

@@ -14,7 +14,7 @@ module.exports = function (app, myDataBase) {
       message: req.body.message,
       showLogin: true,
       showRegistration: true,
-      showSocialAuth: true, 
+      showSocialAuth: true,
     });
   });
 
@@ -72,14 +72,18 @@ module.exports = function (app, myDataBase) {
         res.redirect("/profile");
       }
     );
-
   });
   //github authentication
-  // app.route('/auth/github').get(passport.authenticate('github'));
-  app.route('/auth/github/callback').get(passport.authenticate('github',{failureRedirect:'/'}),(req, res)=>{
-    req.session.user_id = req.user.id;
-    res.redirect('/chat');
-  });
+  app.route("/auth/github").get(passport.authenticate("github"));
+  app
+    .route("/auth/github/callback")
+    .get(
+      passport.authenticate("github", { failureRedirect: "/" }),
+      (req, res) => {
+        req.session.user_id = req.user.id;
+        res.redirect("/chat");
+      }
+    );
   //logout
   app.route("/logout").get((req, res) => {
     req.logout();

@@ -39,7 +39,6 @@ app.engine("handlebars", hbs.engine);
 app.set("view engine", "handlebars");
 
 // //Routes
-app.get("/", (req, res) => res.render("login", { layout: false }));
 app.use("/users", usersRoute);
 app.use("/home", homeRoute);
 
